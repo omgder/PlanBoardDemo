@@ -41,6 +41,8 @@
 		74448DE91BAC02AD00B95B9F /* RecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DCF1BAC02AD00B95B9F /* RecordManager.m */; };
 		74448DEA1BAC02AD00B95B9F /* THCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DD11BAC02AD00B95B9F /* THCapture.m */; };
 		74448DEB1BAC02AD00B95B9F /* THCaptureUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DD31BAC02AD00B95B9F /* THCaptureUtilities.m */; };
+		74448DF41BAC0C9F00B95B9F /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74448DF11BAC0C9F00B95B9F /* libMobClickLibrary.a */; };
+		74448DF91BAC0D6000B95B9F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74448DF81BAC0D6000B95B9F /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		74448DD11BAC02AD00B95B9F /* THCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCapture.m; sourceTree = "<group>"; };
 		74448DD21BAC02AD00B95B9F /* THCaptureUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCaptureUtilities.h; sourceTree = "<group>"; };
 		74448DD31BAC02AD00B95B9F /* THCaptureUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCaptureUtilities.m; sourceTree = "<group>"; };
+		74448DF11BAC0C9F00B95B9F /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		74448DF21BAC0C9F00B95B9F /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		74448DF31BAC0C9F00B95B9F /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		74448DF81BAC0D6000B95B9F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +117,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74448DF91BAC0D6000B95B9F /* libz.dylib in Frameworks */,
 				74448D8D1BAAE47900B95B9F /* Foundation.framework in Frameworks */,
 				74448D8B1BAAE46200B95B9F /* CoreImage.framework in Frameworks */,
 				74448D891BAAE45200B95B9F /* UIKit.framework in Frameworks */,
+				74448DF41BAC0C9F00B95B9F /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,12 +138,10 @@
 		74448D201BAAE3A100B95B9F = {
 			isa = PBXGroup;
 			children = (
+				74448DF51BAC0CB500B95B9F /* Frameworks */,
 				74448DEC1BAC033300B95B9F /* Modules */,
 				74448DBC1BAC02AD00B95B9F /* Resource */,
 				74448DA81BAC027400B95B9F /* Default-568h@2x.png */,
-				74448D8C1BAAE47900B95B9F /* Foundation.framework */,
-				74448D8A1BAAE46200B95B9F /* CoreImage.framework */,
-				74448D881BAAE45200B95B9F /* UIKit.framework */,
 				74448D2B1BAAE3A100B95B9F /* PlanBoardDemo */,
 				74448D451BAAE3A100B95B9F /* PlanBoardDemoTests */,
 				74448D2A1BAAE3A100B95B9F /* Products */,
@@ -317,6 +323,36 @@
 			children = (
 			);
 			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		74448DF51BAC0CB500B95B9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74448DF81BAC0D6000B95B9F /* libz.dylib */,
+				74448DF71BAC0D2E00B95B9F /* Umeng */,
+				74448DF61BAC0CD100B95B9F /* LocalFrameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74448DF61BAC0CD100B95B9F /* LocalFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74448D8C1BAAE47900B95B9F /* Foundation.framework */,
+				74448D8A1BAAE46200B95B9F /* CoreImage.framework */,
+				74448D881BAAE45200B95B9F /* UIKit.framework */,
+			);
+			name = LocalFrameworks;
+			sourceTree = "<group>";
+		};
+		74448DF71BAC0D2E00B95B9F /* Umeng */ = {
+			isa = PBXGroup;
+			children = (
+				74448DF11BAC0C9F00B95B9F /* libMobClickLibrary.a */,
+				74448DF21BAC0C9F00B95B9F /* MobClick.h */,
+				74448DF31BAC0C9F00B95B9F /* MobClickSocialAnalytics.h */,
+			);
+			name = Umeng;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,6 +603,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PlanBoardDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -577,6 +617,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PlanBoardDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "PlayGroundViewController.h"
 
+#define kUmengAppKey @"55fbd12d67e58ecaf90017d1"
+
 @interface AppDelegate ()
 
 @end
@@ -18,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    
+    [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH   channelId:@"test"];
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
