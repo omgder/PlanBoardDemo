@@ -42,7 +42,7 @@
 		74448DEA1BAC02AD00B95B9F /* THCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DD11BAC02AD00B95B9F /* THCapture.m */; };
 		74448DEB1BAC02AD00B95B9F /* THCaptureUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DD31BAC02AD00B95B9F /* THCaptureUtilities.m */; };
 		74448DF41BAC0C9F00B95B9F /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74448DF11BAC0C9F00B95B9F /* libMobClickLibrary.a */; };
-		74448DF91BAC0D6000B95B9F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74448DF81BAC0D6000B95B9F /* libz.dylib */; };
+		744FA1FA1BAC4B1700C335E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 744FA1F91BAC4B1700C335E5 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +109,7 @@
 		74448DF11BAC0C9F00B95B9F /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		74448DF21BAC0C9F00B95B9F /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		74448DF31BAC0C9F00B95B9F /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
-		74448DF81BAC0D6000B95B9F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		744FA1F91BAC4B1700C335E5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74448DF91BAC0D6000B95B9F /* libz.dylib in Frameworks */,
+				744FA1FA1BAC4B1700C335E5 /* libz.tbd in Frameworks */,
 				74448D8D1BAAE47900B95B9F /* Foundation.framework in Frameworks */,
 				74448D8B1BAAE46200B95B9F /* CoreImage.framework in Frameworks */,
 				74448D891BAAE45200B95B9F /* UIKit.framework in Frameworks */,
@@ -328,7 +328,7 @@
 		74448DF51BAC0CB500B95B9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74448DF81BAC0D6000B95B9F /* libz.dylib */,
+				744FA1F91BAC4B1700C335E5 /* libz.tbd */,
 				74448DF71BAC0D2E00B95B9F /* Umeng */,
 				74448DF61BAC0CD100B95B9F /* LocalFrameworks */,
 			);
@@ -678,6 +678,7 @@
 				74448D4E1BAAE3A100B95B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74448D4F1BAAE3A100B95B9F /* Build configuration list for PBXNativeTarget "PlanBoardDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -686,6 +687,7 @@
 				74448D511BAAE3A100B95B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
