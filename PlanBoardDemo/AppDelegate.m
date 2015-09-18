@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PlayGroundViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+    
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    PlayGroundViewController *playVC = [[PlayGroundViewController alloc] init];
+    playVC.view.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = playVC;
+    NSLog(@"%@",NSStringFromCGRect([UIScreen mainScreen].bounds));
+    
+    [self.window addSubview:playVC.view];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
