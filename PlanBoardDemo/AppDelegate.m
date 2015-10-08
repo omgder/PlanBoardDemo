@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import "PlayGroundViewController.h"
+#import "FirstGuideViewController.h"
+#import <SMS_SDK/SMS_SDK.h>
 
 #define kUmengAppKey @"55fbd12d67e58ecaf90017d1"
+#define kMobiSMSAppKey @"ae7acdc8eaf4"
+#define kMobiSMSAppSecretKey @"1b1d839fb37bc574694bd69d61604268"
 
 @interface AppDelegate ()
 
@@ -19,17 +23,44 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   
-    [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH   channelId:@"test"];
     // Override point for customization after application launch.
+    
+    
+    //UMENG Init
+    [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH   channelId:@"test"];
+    
+    //Mobi Init
+    [SMS_SDK registerApp:kMobiSMSAppKey withSecret:kMobiSMSAppSecretKey];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    PlayGroundViewController *playVC = [[PlayGroundViewController alloc] init];
-    playVC.view.frame = [UIScreen mainScreen].bounds;
-    self.window.rootViewController = playVC;
+    
+    
+    //LoginView
+    FirstGuideViewController *firstGuideViewController = [[FirstGuideViewController alloc] initWithNibName:@"FirstGuideViewController" bundle:nil];
+    
+    
+    self.firstGuideNavigationController = [[UINavigationController alloc] initWithRootViewController:firstGuideViewController];
+    
+    [self.firstGuideNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"logo"] forBarMetrics:UIBarMetricsCompact];
+     self.firstGuideNavigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    
+    
+
+    
+   // PlayGroundViewController *playVC = [[PlayGroundViewController alloc] init];
+   // playVC.view.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = self.firstGuideNavigationController;
     NSLog(@"%@",NSStringFromCGRect([UIScreen mainScreen].bounds));
     
-    [self.window addSubview:playVC.view];
+    
+    
+    
+    
+    
+    
+    [self.window addSubview:self.firstGuideNavigationController.view];
     [self.window makeKeyAndVisible];
 
     return YES;

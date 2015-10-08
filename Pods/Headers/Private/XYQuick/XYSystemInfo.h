@@ -1,0 +1,1 @@
+../../../XYQuick/XYQuick/core/modules/XYSystemInfo.h

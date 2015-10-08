@@ -1,0 +1,1 @@
+../../../XYQuick/XYQuick/core/modules/cache/XYAutoCoding.h

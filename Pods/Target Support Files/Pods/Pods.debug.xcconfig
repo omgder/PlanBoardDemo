@@ -1,5 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/SMS-For-iOS/SMS_SDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/SMS-For-iOS" "${PODS_ROOT}/Headers/Public/SMS-For-iOS/SMS_SDK" "${PODS_ROOT}/Headers/Public/XYQuick"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/SMS-For-iOS" -isystem "${PODS_ROOT}/Headers/Public/SMS-For-iOS/SMS_SDK" -isystem "${PODS_ROOT}/Headers/Public/XYQuick"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"XYQuick" -l"icucore" -l"z" -framework "AddressBook" -framework "AddressBookUI" -framework "CoreGraphics" -framework "MessageUI" -framework "MobileCoreServices" -framework "SMS_SDK" -framework "Security" -framework "SystemConfiguration"
 PODS_ROOT = ${SRCROOT}/Pods

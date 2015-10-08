@@ -20,11 +20,31 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - SMS-For-iOS (1.0.9)
+  - XYQuick (0.6.9):
+    - XYQuick/core (= 0.6.9)
+    - XYQuick/event (= 0.6.9)
+    - XYQuick/header (= 0.6.9)
+    - XYQuick/ui (= 0.6.9)
+  - XYQuick/core (0.6.9):
+    - XYQuick/header
+  - XYQuick/event (0.6.9):
+    - XYQuick/core
+    - XYQuick/header
+    - XYQuick/ui
+  - XYQuick/header (0.6.9)
+  - XYQuick/ui (0.6.9):
+    - XYQuick/core
+    - XYQuick/header
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - SMS-For-iOS
+  - XYQuick
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  SMS-For-iOS: e94abec27695d4085a9865d7894dba39cd1e09f2
+  XYQuick: d211474d2f3b209cc087ec3e32b0b4fe89376eae
 
 COCOAPODS: 0.38.2

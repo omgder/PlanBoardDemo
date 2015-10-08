@@ -13,6 +13,12 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) UINavigationController *firstGuideNavigationController;
+
+@property (strong, nonatomic) UINavigationController *homepageNavigationViewController;
+@property (strong, nonatomic) UINavigationController * playGroundNavigationController;
+@property (strong, nonatomic) UINavigationController * teamNavigationController;
+@property (strong, nonatomic) UINavigationController * personCenterNavigationController;
 
 @end
 
