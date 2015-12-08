@@ -49,7 +49,6 @@
 		744A377C1BC50B200007AB29 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744A377A1BC50B200007AB29 /* AddressBookUI.framework */; };
 		744A37851BC5178C0007AB29 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 744A37841BC5178C0007AB29 /* NSString+Extend.m */; settings = {ASSET_TAGS = (); }; };
 		744FA1FA1BAC4B1700C335E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 744FA1F91BAC4B1700C335E5 /* libz.tbd */; };
-		745057521BBD64B60069A2AF /* LoginNetDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 745057511BBD64B60069A2AF /* LoginNetDAO.m */; settings = {ASSET_TAGS = (); }; };
 		745057661BBD69FE0069A2AF /* AppServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 745057651BBD69FE0069A2AF /* AppServerConfig.m */; settings = {ASSET_TAGS = (); }; };
 		7450576E1BBFD19C0069A2AF /* FirstGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7450576C1BBFD19C0069A2AF /* FirstGuideViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7450576F1BBFD19C0069A2AF /* FirstGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7450576D1BBFD19C0069A2AF /* FirstGuideViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -65,9 +64,12 @@
 		748D28971BC2AB7B00C39DE6 /* RegisterInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D28951BC2AB7B00C39DE6 /* RegisterInformationViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		74B9B6141BC6660600599F19 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6111BC6660600599F19 /* HttpHelper.m */; settings = {ASSET_TAGS = (); }; };
 		74B9B6151BC6660600599F19 /* HttpHelper+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6131BC6660600599F19 /* HttpHelper+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		74B9B6181BC6725E00599F19 /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6171BC6725E00599F19 /* AFDownloadRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		74B9B61F1BC673A600599F19 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B61C1BC673A600599F19 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		74B9B6201BC673A600599F19 /* XLReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B61E1BC673A600599F19 /* XLReachabilityHelper.m */; settings = {ASSET_TAGS = (); }; };
+		74B9B6251BC6DD3500599F19 /* LoginNetDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6241BC6DD3500599F19 /* LoginNetDAO.m */; settings = {ASSET_TAGS = (); }; };
+		74B9B6281BC6F81300599F19 /* registManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6271BC6F81300599F19 /* registManager.m */; settings = {ASSET_TAGS = (); }; };
+		74F6E56C1BCA499800972DB0 /* RegistInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E56B1BCA499800972DB0 /* RegistInfoEntity.m */; settings = {ASSET_TAGS = (); }; };
+		74F6E57B1BCD34C500972DB0 /* XLHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E57A1BCD34C500972DB0 /* XLHttpHelper.m */; settings = {ASSET_TAGS = (); }; };
 		EAC185FAC4FEB750C3F1B7A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F970639D7EF47753C09D5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -146,8 +148,6 @@
 		744A37831BC5178C0007AB29 /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extend.h"; path = "commonkit/NSString+Extend.h"; sourceTree = "<group>"; };
 		744A37841BC5178C0007AB29 /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extend.m"; path = "commonkit/NSString+Extend.m"; sourceTree = "<group>"; };
 		744FA1F91BAC4B1700C335E5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		745057501BBD64B60069A2AF /* LoginNetDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginNetDAO.h; path = Login/LoginNetDAO.h; sourceTree = "<group>"; };
-		745057511BBD64B60069A2AF /* LoginNetDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginNetDAO.m; path = Login/LoginNetDAO.m; sourceTree = "<group>"; };
 		745057641BBD69FE0069A2AF /* AppServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServerConfig.h; sourceTree = "<group>"; };
 		745057651BBD69FE0069A2AF /* AppServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServerConfig.m; sourceTree = "<group>"; };
 		7450576B1BBFD19B0069A2AF /* FirstGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstGuideViewController.h; path = Login/FirstGuideViewController.h; sourceTree = "<group>"; };
@@ -172,12 +172,18 @@
 		74B9B6111BC6660600599F19 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpHelper.m; path = commonkit/HttpHelper.m; sourceTree = "<group>"; };
 		74B9B6121BC6660600599F19 /* HttpHelper+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HttpHelper+AFNetworking.h"; path = "commonkit/HttpHelper+AFNetworking.h"; sourceTree = "<group>"; };
 		74B9B6131BC6660600599F19 /* HttpHelper+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HttpHelper+AFNetworking.m"; path = "commonkit/HttpHelper+AFNetworking.m"; sourceTree = "<group>"; };
-		74B9B6161BC6725E00599F19 /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFDownloadRequestOperation.h; path = commonkit/AFDownloadRequestOperation.h; sourceTree = "<group>"; };
-		74B9B6171BC6725E00599F19 /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFDownloadRequestOperation.m; path = commonkit/AFDownloadRequestOperation.m; sourceTree = "<group>"; };
 		74B9B61B1BC673A600599F19 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = commonkit/Reachability.h; sourceTree = "<group>"; };
 		74B9B61C1BC673A600599F19 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = commonkit/Reachability.m; sourceTree = "<group>"; };
 		74B9B61D1BC673A600599F19 /* XLReachabilityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XLReachabilityHelper.h; path = commonkit/XLReachabilityHelper.h; sourceTree = "<group>"; };
 		74B9B61E1BC673A600599F19 /* XLReachabilityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XLReachabilityHelper.m; path = commonkit/XLReachabilityHelper.m; sourceTree = "<group>"; };
+		74B9B6231BC6DD3500599F19 /* LoginNetDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginNetDAO.h; path = DAO/LoginNetDAO.h; sourceTree = "<group>"; };
+		74B9B6241BC6DD3500599F19 /* LoginNetDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginNetDAO.m; path = DAO/LoginNetDAO.m; sourceTree = "<group>"; };
+		74B9B6261BC6F81300599F19 /* registManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registManager.h; sourceTree = "<group>"; };
+		74B9B6271BC6F81300599F19 /* registManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registManager.m; sourceTree = "<group>"; };
+		74F6E56A1BCA499800972DB0 /* RegistInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistInfoEntity.h; sourceTree = "<group>"; };
+		74F6E56B1BCA499800972DB0 /* RegistInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistInfoEntity.m; sourceTree = "<group>"; };
+		74F6E5791BCD34C500972DB0 /* XLHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XLHttpHelper.h; path = commonkit/XLHttpHelper.h; sourceTree = "<group>"; };
+		74F6E57A1BCD34C500972DB0 /* XLHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XLHttpHelper.m; path = commonkit/XLHttpHelper.m; sourceTree = "<group>"; };
 		852B470416C3D968F65D357F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +218,9 @@
 		74448D201BAAE3A100B95B9F = {
 			isa = PBXGroup;
 			children = (
+				74F6E5691BCA497D00972DB0 /* Entity */,
+				74B9B6291BC6F83000599F19 /* Manager */,
+				74B9B6221BC6DC3D00599F19 /* DAO */,
 				7450575A1BBD681B0069A2AF /* CommonKit */,
 				74448DF51BAC0CB500B95B9F /* Frameworks */,
 				74448DEC1BAC033300B95B9F /* Modules */,
@@ -462,8 +471,6 @@
 		745057671BBFD1040069A2AF /* DAO */ = {
 			isa = PBXGroup;
 			children = (
-				745057501BBD64B60069A2AF /* LoginNetDAO.h */,
-				745057511BBD64B60069A2AF /* LoginNetDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -502,12 +509,12 @@
 		74B9B6191BC6726300599F19 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				74F6E5791BCD34C500972DB0 /* XLHttpHelper.h */,
+				74F6E57A1BCD34C500972DB0 /* XLHttpHelper.m */,
 				74B9B61B1BC673A600599F19 /* Reachability.h */,
 				74B9B61C1BC673A600599F19 /* Reachability.m */,
 				74B9B61D1BC673A600599F19 /* XLReachabilityHelper.h */,
 				74B9B61E1BC673A600599F19 /* XLReachabilityHelper.m */,
-				74B9B6161BC6725E00599F19 /* AFDownloadRequestOperation.h */,
-				74B9B6171BC6725E00599F19 /* AFDownloadRequestOperation.m */,
 				74B9B6101BC6660600599F19 /* HttpHelper.h */,
 				74B9B6111BC6660600599F19 /* HttpHelper.m */,
 				74B9B6121BC6660600599F19 /* HttpHelper+AFNetworking.h */,
@@ -525,6 +532,33 @@
 				744A37841BC5178C0007AB29 /* NSString+Extend.m */,
 			);
 			name = UIKit;
+			sourceTree = "<group>";
+		};
+		74B9B6221BC6DC3D00599F19 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				74B9B6231BC6DD3500599F19 /* LoginNetDAO.h */,
+				74B9B6241BC6DD3500599F19 /* LoginNetDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		74B9B6291BC6F83000599F19 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				74B9B6261BC6F81300599F19 /* registManager.h */,
+				74B9B6271BC6F81300599F19 /* registManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		74F6E5691BCA497D00972DB0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				74F6E56A1BCA499800972DB0 /* RegistInfoEntity.h */,
+				74F6E56B1BCA499800972DB0 /* RegistInfoEntity.m */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		FB7C90BBFB954540CF6B0459 /* Pods */ = {
@@ -548,6 +582,7 @@
 				74448D261BAAE3A100B95B9F /* Frameworks */,
 				74448D271BAAE3A100B95B9F /* Resources */,
 				8BE506963FE3583BE6BA86CA /* Copy Pods Resources */,
+				4E9C04805335EF2D46EB95FD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -655,6 +690,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4E9C04805335EF2D46EB95FD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7106F3961FF85BA30D2DD3FC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -695,11 +745,12 @@
 				74448D351BAAE3A100B95B9F /* ViewController.m in Sources */,
 				74448DD91BAC02AD00B95B9F /* RCDraggableButton.m in Sources */,
 				74B9B6201BC673A600599F19 /* XLReachabilityHelper.m in Sources */,
-				745057521BBD64B60069A2AF /* LoginNetDAO.m in Sources */,
+				74B9B6251BC6DD3500599F19 /* LoginNetDAO.m in Sources */,
 				74448DEA1BAC02AD00B95B9F /* THCapture.m in Sources */,
 				74448DE91BAC02AD00B95B9F /* RecordManager.m in Sources */,
 				74448DEB1BAC02AD00B95B9F /* THCaptureUtilities.m in Sources */,
 				74448D321BAAE3A100B95B9F /* AppDelegate.m in Sources */,
+				74B9B6281BC6F81300599F19 /* registManager.m in Sources */,
 				74B9B6141BC6660600599F19 /* HttpHelper.m in Sources */,
 				74448DD51BAC02AD00B95B9F /* ACEDrawingView.m in Sources */,
 				748D288C1BC27BB500C39DE6 /* PasswordCell.m in Sources */,
@@ -711,8 +762,9 @@
 				748D28871BC27B9500C39DE6 /* UserAccountCell.m in Sources */,
 				74448DD81BAC02AD00B95B9F /* PlayersManager.m in Sources */,
 				748D287C1BC1A9A200C39DE6 /* RegisterViewController.m in Sources */,
-				74B9B6181BC6725E00599F19 /* AFDownloadRequestOperation.m in Sources */,
 				745057741BC011B30069A2AF /* ModuleRouter.m in Sources */,
+				74F6E57B1BCD34C500972DB0 /* XLHttpHelper.m in Sources */,
+				74F6E56C1BCA499800972DB0 /* RegistInfoEntity.m in Sources */,
 				744A37851BC5178C0007AB29 /* NSString+Extend.m in Sources */,
 				74B9B6151BC6660600599F19 /* HttpHelper+AFNetworking.m in Sources */,
 				74448DD61BAC02AD00B95B9F /* LZXAudioRecordAndTransCoding.m in Sources */,

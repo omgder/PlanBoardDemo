@@ -88,6 +88,8 @@
             {
         
                 RegisterInformationViewController *registerInfoVC = [[RegisterInformationViewController alloc] initWithNibName:@"RegisterInformationViewController" bundle:nil];
+                
+                registerInfoVC.number = self.phoneNumberInputTextField.text;
                 [self.navigationController pushViewController:registerInfoVC animated:YES];
             }
             
@@ -150,6 +152,7 @@
 }
 
 
-#pragma mark -- KVO
+#pragma mark -- updateData
+
 
 @end

@@ -10,6 +10,8 @@
 
 @interface RegisterViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
+
+
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberInputTextField;
 
 @property (weak, nonatomic) IBOutlet UIButton *getVerifyCodeBtn;

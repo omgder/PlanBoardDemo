@@ -12,8 +12,6 @@
 #import "HttpHelper+AFNetworking.h"
 #import "AFDownloadRequestOperation.h"
 #import "XLReachabilityHelper.h"
-#import "AFURLRequestSerialization.h"
-//#import <arpa/inet.h>
 #import "NSString+Extend.h"
 #import "XYThread.h"
 
@@ -23,6 +21,99 @@
 #define HttpHelperDefaultMaxRequestCountWWAN 2
 
 @class XLHTTPResponseSerializer;
+
+#pragma mark AFNetworking
+
+static NSString * const kAFCharactersToBeEscapedInQueryString = @":/?&=;+!@#$()',*";
+
+static NSString * AFPercentEscapedQueryStringKeyFromStringWithEncoding(NSString *string, NSStringEncoding encoding) {
+    static NSString * const kAFCharactersToLeaveUnescapedInQueryStringPairKey = @"[].";
+    
+    return (__bridge_transfer  NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)string, (__bridge CFStringRef)kAFCharactersToLeaveUnescapedInQueryStringPairKey, (__bridge CFStringRef)kAFCharactersToBeEscapedInQueryString, CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
+static NSString * AFPercentEscapedQueryStringValueFromStringWithEncoding(NSString *string, NSStringEncoding encoding) {
+    return (__bridge_transfer  NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)string, NULL, (__bridge CFStringRef)kAFCharactersToBeEscapedInQueryString, CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
+@interface HelpAFQueryStringPair : NSObject
+@property (readwrite, nonatomic, strong) id field;
+@property (readwrite, nonatomic, strong) id value;
+
+- (id)initWithField:(id)field value:(id)value;
+
+- (NSString *)URLEncodedStringValueWithEncoding:(NSStringEncoding)stringEncoding;
+@end
+
+@implementation HelpAFQueryStringPair
+
+- (id)initWithField:(id)field value:(id)value {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    self.field = field;
+    self.value = value;
+    
+    return self;
+}
+
+- (NSString *)URLEncodedStringValueWithEncoding:(NSStringEncoding)stringEncoding {
+    if (!self.value || [self.value isEqual:[NSNull null]]) {
+        return AFPercentEscapedQueryStringKeyFromStringWithEncoding([self.field description], stringEncoding);
+    } else {
+        return [NSString stringWithFormat:@"%@=%@", AFPercentEscapedQueryStringKeyFromStringWithEncoding([self.field description], stringEncoding), AFPercentEscapedQueryStringValueFromStringWithEncoding([self.value description], stringEncoding)];
+    }
+}
+
+@end
+
+NSArray * HelpAFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
+    NSMutableArray *mutableQueryStringComponents = [NSMutableArray array];
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES selector:@selector(compare:)];
+    
+    if ([value isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *dictionary = value;
+        // Sort dictionary keys to ensure consistent ordering in query string, which is important when deserializing potentially ambiguous sequences, such as an array of dictionaries
+        for (id nestedKey in [dictionary.allKeys sortedArrayUsingDescriptors:@[ sortDescriptor ]]) {
+            id nestedValue = [dictionary objectForKey:nestedKey];
+            if (nestedValue) {
+                [mutableQueryStringComponents addObjectsFromArray:HelpAFQueryStringPairsFromKeyAndValue((key ? [NSString stringWithFormat:@"%@[%@]", key, nestedKey] : nestedKey), nestedValue)];
+            }
+        }
+    } else if ([value isKindOfClass:[NSArray class]]) {
+        NSArray *array = value;
+        for (id nestedValue in array) {
+            [mutableQueryStringComponents addObjectsFromArray:HelpAFQueryStringPairsFromKeyAndValue([NSString stringWithFormat:@"%@[]", key], nestedValue)];
+        }
+    } else if ([value isKindOfClass:[NSSet class]]) {
+        NSSet *set = value;
+        for (id obj in [set sortedArrayUsingDescriptors:@[ sortDescriptor ]]) {
+            [mutableQueryStringComponents addObjectsFromArray:HelpAFQueryStringPairsFromKeyAndValue(key, obj)];
+        }
+    } else {
+        [mutableQueryStringComponents addObject:[[HelpAFQueryStringPair alloc] initWithField:key value:value]];
+    }
+    
+    return mutableQueryStringComponents;
+}
+
+NSArray * HelperAFQueryStringPairsFromDictionary(NSDictionary *dictionary) {
+    return HelpAFQueryStringPairsFromKeyAndValue(nil, dictionary);
+}
+
+
+static NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *parameters, NSStringEncoding stringEncoding) {
+    NSMutableArray *mutablePairs = [NSMutableArray array];
+    for (HelpAFQueryStringPair *pair in HelperAFQueryStringPairsFromDictionary(parameters)) {
+        [mutablePairs addObject:[pair URLEncodedStringValueWithEncoding:stringEncoding]];
+    }
+    
+    return [mutablePairs componentsJoinedByString:@"&"];
+}
+
 
 #pragma mark - Class HttpRequest
 
@@ -83,7 +174,7 @@
     }
     
     //借用一下AFNetworking里现成的方法
-    NSString* urlString = ((params.count == 0) ? path : ([path stringByAppendingFormat:[path rangeOfString:@"?"].location == NSNotFound ? @"?%@" : @"&%@", AFQueryStringFromParameters(params)]));
+    NSString* urlString = ((params.count == 0) ? path : ([path stringByAppendingFormat:[path rangeOfString:@"?"].location == NSNotFound ? @"?%@" : @"&%@", AFQueryStringFromParametersWithEncoding(params, NSUTF8StringEncoding)]));
     
     //检查一下URL是否符合规范，不合要求的要进行URL编码
     NSURL* url = [NSURL URLWithString:urlString];
@@ -432,28 +523,28 @@
     
     //(3)创建Operation，指定返回时的操作（注意，执行完操作后，要将block置空，打破循环引用）
     AFHTTPRequestOperation *operation = [self.httpManager HTTPRequestOperationWithRequest:httpRequest.request success:^(AFHTTPRequestOperation *operation, id responseObject)
-    {
-        httpRequest.response = operation.response;
-        if(httpRequest.success)
-        {
-            httpRequest.success(httpRequest, nil, responseObject, NO);
-        }
-        //对于成功的返回，如有需要，将数据缓存到文件
-        if(httpRequest.usingCache && (operation.response.statusCode == 200))
-        {
-            [self saveDataCache:responseObject withRequest:httpRequest];
-        }
-        [self postprocessRequest:httpRequest];
-    }
-    failure:^(AFHTTPRequestOperation *operation, NSError *error)
-    {
-        httpRequest.response = operation.response;
-        if(httpRequest.failure)
-        {
-            httpRequest.failure(httpRequest, error);
-        }
-        [self postprocessRequest:httpRequest];
-    }];
+                                         {
+                                             httpRequest.response = operation.response;
+                                             if(httpRequest.success)
+                                             {
+                                                 httpRequest.success(httpRequest, nil, responseObject, NO);
+                                             }
+                                             //对于成功的返回，如有需要，将数据缓存到文件
+                                             if(httpRequest.usingCache && (operation.response.statusCode == 200))
+                                             {
+                                                 [self saveDataCache:responseObject withRequest:httpRequest];
+                                             }
+                                             [self postprocessRequest:httpRequest];
+                                         }
+                                                                                  failure:^(AFHTTPRequestOperation *operation, NSError *error)
+                                         {
+                                             httpRequest.response = operation.response;
+                                             if(httpRequest.failure)
+                                             {
+                                                 httpRequest.failure(httpRequest, error);
+                                             }
+                                             [self postprocessRequest:httpRequest];
+                                         }];
     
     //(4)准备发起请求
     [self.httpManager.operationQueue addOperation:operation];
@@ -517,7 +608,7 @@
     {
         return nil;
     }
-        
+    
     NSMutableDictionary* param = [NSMutableDictionary dictionaryWithDictionary:request.params];
     [param addEntriesFromDictionary:self.defaultParams];
     return param;
@@ -555,31 +646,31 @@
     AFDownloadRequestOperation *operation = [[AFDownloadRequestOperation alloc] initWithRequest:httpRequest.request targetPath:httpRequest.savePath shouldResume:YES];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
-    {
-        httpRequest.response = operation.response;
-        if(httpRequest.success)
-        {
-            httpRequest.success(httpRequest, nil, responseObject, NO);
-        }
-        [self postprocessRequest:httpRequest];
-    }
-    failure:^(AFHTTPRequestOperation *operation, NSError *error)
-    {
-        httpRequest.response = operation.response;
-        if(httpRequest.failure)
-        {
-            httpRequest.failure(httpRequest, error);
-        }
-        [self postprocessRequest:httpRequest];
-    }];
+     {
+         httpRequest.response = operation.response;
+         if(httpRequest.success)
+         {
+             httpRequest.success(httpRequest, nil, responseObject, NO);
+         }
+         [self postprocessRequest:httpRequest];
+     }
+                                     failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         httpRequest.response = operation.response;
+         if(httpRequest.failure)
+         {
+             httpRequest.failure(httpRequest, error);
+         }
+         [self postprocessRequest:httpRequest];
+     }];
     
     [operation setProgressiveDownloadProgressBlock:^(AFDownloadRequestOperation *operation, NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpected, long long totalBytesReadForFile, long long totalBytesExpectedToReadForFile)
-    {
-        if(httpRequest.progress)
-        {
-            httpRequest.progress(httpRequest, bytesRead, totalBytesRead, totalBytesExpected, totalBytesReadForFile, totalBytesExpectedToReadForFile);
-        }
-    }];
+     {
+         if(httpRequest.progress)
+         {
+             httpRequest.progress(httpRequest, bytesRead, totalBytesRead, totalBytesExpected, totalBytesReadForFile, totalBytesExpectedToReadForFile);
+         }
+     }];
     
     //(4)准备发起请求
     [self.httpManager.operationQueue addOperation:operation];
