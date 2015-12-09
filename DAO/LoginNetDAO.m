@@ -29,7 +29,7 @@
     NSString *url = @"http://119.29.89.117/goal/iface/doreg.json";
     //要传dic不然要崩溃
    
-    HttpRequest* request = [HttpRequest requestWithPostPath:url params:nil data:registInfo];
+    HttpRequest* request = [HttpRequest requestWithPostPath:url params:registInfo data:registInfo];
     
     [[request success:^(id request, NSError *error, id responseObject, BOOL isCache)
     {

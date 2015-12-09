@@ -12,6 +12,18 @@
 
 @implementation ModuleRouter
 
++ (instancetype)sharedInstance
+{
+    static dispatch_once_t once;
+    static id singleton;
+    dispatch_once( &once, ^{ singleton = [[self alloc] init]; } );
+    return singleton;
+}
 
+- (void)jumpToMatchListViewControllerFromSource:(UIViewController *)source
+{
+    UIStoryboard *mainBoard = [UIStoryboard storyboardWithName:@"PlanBoardStoryBoard" bundle:nil];
+    [source presentViewController:[mainBoard instantiateViewControllerWithIdentifier:@"rootTab"] animated:YES completion:nil];
+}
 
 @end

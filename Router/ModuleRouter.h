@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ModuleRouter : NSObject
+
++ (instancetype)sharedInstance;
+
+- (void)jumpToMatchListViewControllerFromSource:(UIViewController *)source;
+
 
 @end

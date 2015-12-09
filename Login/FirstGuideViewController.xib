@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstGuideViewController">
@@ -21,12 +21,14 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BI-OV-VnY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9E-mv-bEl" userLabel="ButtonsView">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="alZ-ug-foa">
                             <rect key="frame" x="189" y="150" width="221" height="69"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="221" id="ce5-ay-h40"/>
                                 <constraint firstAttribute="height" constant="69" id="sBJ-do-uIK"/>
@@ -34,6 +36,7 @@
                         </imageView>
                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C67-r6-Hhc">
                             <rect key="frame" x="304" y="530" width="105.5" height="30"/>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="注册">
@@ -45,6 +48,7 @@
                         </button>
                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-uH-u1e">
                             <rect key="frame" x="189" y="530" width="105.5" height="30"/>
+                            <animations/>
                             <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="登陆">
@@ -52,6 +56,7 @@
                             </state>
                         </button>
                     </subviews>
+                    <animations/>
                     <constraints>
                         <constraint firstItem="7ot-uH-u1e" firstAttribute="leading" secondItem="alZ-ug-foa" secondAttribute="leading" id="2oo-HR-eDm"/>
                         <constraint firstItem="C67-r6-Hhc" firstAttribute="bottom" secondItem="7ot-uH-u1e" secondAttribute="bottom" id="93f-d6-yie"/>
@@ -64,6 +69,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="F9E-mv-bEl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HlW-99-p0X"/>

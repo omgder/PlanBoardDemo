@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74074A991C181BAF00F6023B /* PlanBoardStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74074A981C181BAF00F6023B /* PlanBoardStoryBoard.storyboard */; };
+		74074AA11C18287400F6023B /* MatchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74074AA01C18287400F6023B /* MatchListViewController.m */; };
+		74074AA71C18313000F6023B /* PBNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74074AA61C18313000F6023B /* PBNavigationViewController.m */; };
+		74074AAA1C18334400F6023B /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74074AA91C18334400F6023B /* RootTabBarViewController.m */; };
+		74074AAF1C188DAC00F6023B /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74074AAD1C188DAC00F6023B /* LoginTableViewController.m */; };
+		74074AB01C188DAC00F6023B /* LoginTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74074AAE1C188DAC00F6023B /* LoginTableViewController.xib */; };
+		74074AB41C18975600F6023B /* UserNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74074AB21C18975600F6023B /* UserNameTableViewCell.m */; };
+		74074AB51C18975600F6023B /* UserNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74074AB31C18975600F6023B /* UserNameTableViewCell.xib */; };
+		74074AB91C18977000F6023B /* PasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74074AB71C18977000F6023B /* PasswordTableViewCell.m */; };
+		74074ABA1C18977000F6023B /* PasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74074AB81C18977000F6023B /* PasswordTableViewCell.xib */; };
 		74448D2F1BAAE3A100B95B9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448D2E1BAAE3A100B95B9F /* main.m */; };
 		74448D321BAAE3A100B95B9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448D311BAAE3A100B95B9F /* AppDelegate.m */; };
 		74448D351BAAE3A100B95B9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448D341BAAE3A100B95B9F /* ViewController.m */; };
@@ -42,34 +52,30 @@
 		74448DEA1BAC02AD00B95B9F /* THCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DD11BAC02AD00B95B9F /* THCapture.m */; };
 		74448DEB1BAC02AD00B95B9F /* THCaptureUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74448DD31BAC02AD00B95B9F /* THCaptureUtilities.m */; };
 		74448DF41BAC0C9F00B95B9F /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74448DF11BAC0C9F00B95B9F /* libMobClickLibrary.a */; };
-		744A37741BC3EB3F0007AB29 /* CALayer+ColorFromUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 744A37731BC3EB3F0007AB29 /* CALayer+ColorFromUIColor.m */; settings = {ASSET_TAGS = (); }; };
+		744A37741BC3EB3F0007AB29 /* CALayer+ColorFromUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 744A37731BC3EB3F0007AB29 /* CALayer+ColorFromUIColor.m */; };
 		744A37761BC50AEE0007AB29 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 744A37751BC50AED0007AB29 /* libicucore.tbd */; };
 		744A37781BC50B060007AB29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744A37771BC50B060007AB29 /* MessageUI.framework */; };
 		744A377B1BC50B200007AB29 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744A37791BC50B200007AB29 /* AddressBook.framework */; };
 		744A377C1BC50B200007AB29 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744A377A1BC50B200007AB29 /* AddressBookUI.framework */; };
-		744A37851BC5178C0007AB29 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 744A37841BC5178C0007AB29 /* NSString+Extend.m */; settings = {ASSET_TAGS = (); }; };
+		744A37851BC5178C0007AB29 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 744A37841BC5178C0007AB29 /* NSString+Extend.m */; };
 		744FA1FA1BAC4B1700C335E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 744FA1F91BAC4B1700C335E5 /* libz.tbd */; };
-		745057661BBD69FE0069A2AF /* AppServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 745057651BBD69FE0069A2AF /* AppServerConfig.m */; settings = {ASSET_TAGS = (); }; };
-		7450576E1BBFD19C0069A2AF /* FirstGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7450576C1BBFD19C0069A2AF /* FirstGuideViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7450576F1BBFD19C0069A2AF /* FirstGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7450576D1BBFD19C0069A2AF /* FirstGuideViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		745057741BC011B30069A2AF /* ModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 745057731BC011B30069A2AF /* ModuleRouter.m */; settings = {ASSET_TAGS = (); }; };
-		748D28781BC16CA500C39DE6 /* lanchvide.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 748D28771BC16CA500C39DE6 /* lanchvide.mp4 */; settings = {ASSET_TAGS = (); }; };
-		748D287C1BC1A9A200C39DE6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D287A1BC1A9A200C39DE6 /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		748D287D1BC1A9A200C39DE6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D287B1BC1A9A200C39DE6 /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		748D28871BC27B9500C39DE6 /* UserAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D28851BC27B9500C39DE6 /* UserAccountCell.m */; settings = {ASSET_TAGS = (); }; };
-		748D28881BC27B9500C39DE6 /* UserAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D28861BC27B9500C39DE6 /* UserAccountCell.xib */; settings = {ASSET_TAGS = (); }; };
-		748D288C1BC27BB500C39DE6 /* PasswordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D288A1BC27BB500C39DE6 /* PasswordCell.m */; settings = {ASSET_TAGS = (); }; };
-		748D288D1BC27BB500C39DE6 /* PasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D288B1BC27BB500C39DE6 /* PasswordCell.xib */; settings = {ASSET_TAGS = (); }; };
-		748D28961BC2AB7B00C39DE6 /* RegisterInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D28941BC2AB7B00C39DE6 /* RegisterInformationViewController.m */; settings = {ASSET_TAGS = (); }; };
-		748D28971BC2AB7B00C39DE6 /* RegisterInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D28951BC2AB7B00C39DE6 /* RegisterInformationViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		74B9B6141BC6660600599F19 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6111BC6660600599F19 /* HttpHelper.m */; settings = {ASSET_TAGS = (); }; };
-		74B9B6151BC6660600599F19 /* HttpHelper+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6131BC6660600599F19 /* HttpHelper+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		74B9B61F1BC673A600599F19 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B61C1BC673A600599F19 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
-		74B9B6201BC673A600599F19 /* XLReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B61E1BC673A600599F19 /* XLReachabilityHelper.m */; settings = {ASSET_TAGS = (); }; };
-		74B9B6251BC6DD3500599F19 /* LoginNetDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6241BC6DD3500599F19 /* LoginNetDAO.m */; settings = {ASSET_TAGS = (); }; };
-		74B9B6281BC6F81300599F19 /* registManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6271BC6F81300599F19 /* registManager.m */; settings = {ASSET_TAGS = (); }; };
-		74F6E56C1BCA499800972DB0 /* RegistInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E56B1BCA499800972DB0 /* RegistInfoEntity.m */; settings = {ASSET_TAGS = (); }; };
-		74F6E57B1BCD34C500972DB0 /* XLHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E57A1BCD34C500972DB0 /* XLHttpHelper.m */; settings = {ASSET_TAGS = (); }; };
+		745057661BBD69FE0069A2AF /* AppServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 745057651BBD69FE0069A2AF /* AppServerConfig.m */; };
+		7450576E1BBFD19C0069A2AF /* FirstGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7450576C1BBFD19C0069A2AF /* FirstGuideViewController.m */; };
+		7450576F1BBFD19C0069A2AF /* FirstGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7450576D1BBFD19C0069A2AF /* FirstGuideViewController.xib */; };
+		745057741BC011B30069A2AF /* ModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 745057731BC011B30069A2AF /* ModuleRouter.m */; };
+		748D28781BC16CA500C39DE6 /* lanchvide.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 748D28771BC16CA500C39DE6 /* lanchvide.mp4 */; };
+		748D287C1BC1A9A200C39DE6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D287A1BC1A9A200C39DE6 /* RegisterViewController.m */; };
+		748D287D1BC1A9A200C39DE6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D287B1BC1A9A200C39DE6 /* RegisterViewController.xib */; };
+		748D28961BC2AB7B00C39DE6 /* RegisterInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D28941BC2AB7B00C39DE6 /* RegisterInformationViewController.m */; };
+		748D28971BC2AB7B00C39DE6 /* RegisterInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748D28951BC2AB7B00C39DE6 /* RegisterInformationViewController.xib */; };
+		74B9B6141BC6660600599F19 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6111BC6660600599F19 /* HttpHelper.m */; };
+		74B9B6151BC6660600599F19 /* HttpHelper+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6131BC6660600599F19 /* HttpHelper+AFNetworking.m */; };
+		74B9B61F1BC673A600599F19 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B61C1BC673A600599F19 /* Reachability.m */; };
+		74B9B6201BC673A600599F19 /* XLReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B61E1BC673A600599F19 /* XLReachabilityHelper.m */; };
+		74B9B6251BC6DD3500599F19 /* LoginNetDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6241BC6DD3500599F19 /* LoginNetDAO.m */; };
+		74B9B6281BC6F81300599F19 /* registManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B6271BC6F81300599F19 /* registManager.m */; };
+		74F6E56C1BCA499800972DB0 /* RegistInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E56B1BCA499800972DB0 /* RegistInfoEntity.m */; };
+		74F6E57B1BCD34C500972DB0 /* XLHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E57A1BCD34C500972DB0 /* XLHttpHelper.m */; };
 		EAC185FAC4FEB750C3F1B7A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F970639D7EF47753C09D5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +92,22 @@
 /* Begin PBXFileReference section */
 		168F970639D7EF47753C09D5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E65225AF8FD485D9AA4094B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		74074A981C181BAF00F6023B /* PlanBoardStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlanBoardStoryBoard.storyboard; sourceTree = "<group>"; };
+		74074A9F1C18287400F6023B /* MatchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchListViewController.h; sourceTree = "<group>"; };
+		74074AA01C18287400F6023B /* MatchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchListViewController.m; sourceTree = "<group>"; };
+		74074AA51C18313000F6023B /* PBNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBNavigationViewController.h; sourceTree = "<group>"; };
+		74074AA61C18313000F6023B /* PBNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBNavigationViewController.m; sourceTree = "<group>"; };
+		74074AA81C18334400F6023B /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		74074AA91C18334400F6023B /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
+		74074AAC1C188DAC00F6023B /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
+		74074AAD1C188DAC00F6023B /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
+		74074AAE1C188DAC00F6023B /* LoginTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginTableViewController.xib; sourceTree = "<group>"; };
+		74074AB11C18975600F6023B /* UserNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNameTableViewCell.h; sourceTree = "<group>"; };
+		74074AB21C18975600F6023B /* UserNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNameTableViewCell.m; sourceTree = "<group>"; };
+		74074AB31C18975600F6023B /* UserNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameTableViewCell.xib; sourceTree = "<group>"; };
+		74074AB61C18977000F6023B /* PasswordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTableViewCell.h; sourceTree = "<group>"; };
+		74074AB71C18977000F6023B /* PasswordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordTableViewCell.m; sourceTree = "<group>"; };
+		74074AB81C18977000F6023B /* PasswordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordTableViewCell.xib; sourceTree = "<group>"; };
 		74448D291BAAE3A100B95B9F /* PlanBoardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanBoardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74448D2D1BAAE3A100B95B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74448D2E1BAAE3A100B95B9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,12 +181,6 @@
 		748D28791BC1A9A200C39DE6 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Login/RegisterViewController.h; sourceTree = "<group>"; };
 		748D287A1BC1A9A200C39DE6 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Login/RegisterViewController.m; sourceTree = "<group>"; };
 		748D287B1BC1A9A200C39DE6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Login/RegisterViewController.xib; sourceTree = "<group>"; };
-		748D28841BC27B9500C39DE6 /* UserAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountCell.h; sourceTree = "<group>"; };
-		748D28851BC27B9500C39DE6 /* UserAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountCell.m; sourceTree = "<group>"; };
-		748D28861BC27B9500C39DE6 /* UserAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAccountCell.xib; sourceTree = "<group>"; };
-		748D28891BC27BB500C39DE6 /* PasswordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PasswordCell.h; path = Login/PasswordCell.h; sourceTree = "<group>"; };
-		748D288A1BC27BB500C39DE6 /* PasswordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PasswordCell.m; path = Login/PasswordCell.m; sourceTree = "<group>"; };
-		748D288B1BC27BB500C39DE6 /* PasswordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PasswordCell.xib; path = Login/PasswordCell.xib; sourceTree = "<group>"; };
 		748D28931BC2AB7B00C39DE6 /* RegisterInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInformationViewController.h; sourceTree = "<group>"; };
 		748D28941BC2AB7B00C39DE6 /* RegisterInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInformationViewController.m; sourceTree = "<group>"; };
 		748D28951BC2AB7B00C39DE6 /* RegisterInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterInformationViewController.xib; sourceTree = "<group>"; };
@@ -215,9 +231,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74074AAB1C188D0B00F6023B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		74448D201BAAE3A100B95B9F = {
 			isa = PBXGroup;
 			children = (
+				74074AAB1C188D0B00F6023B /* Service */,
 				74F6E5691BCA497D00972DB0 /* Entity */,
 				74B9B6291BC6F83000599F19 /* Manager */,
 				74B9B6221BC6DC3D00599F19 /* DAO */,
@@ -411,6 +435,13 @@
 		74448DEF1BAC03CA00B95B9F /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
+				74074A981C181BAF00F6023B /* PlanBoardStoryBoard.storyboard */,
+				74074AA81C18334400F6023B /* RootTabBarViewController.h */,
+				74074AA91C18334400F6023B /* RootTabBarViewController.m */,
+				74074A9F1C18287400F6023B /* MatchListViewController.h */,
+				74074AA01C18287400F6023B /* MatchListViewController.m */,
+				74074AA51C18313000F6023B /* PBNavigationViewController.h */,
+				74074AA61C18313000F6023B /* PBNavigationViewController.m */,
 			);
 			name = RootViewController;
 			sourceTree = "<group>";
@@ -487,12 +518,15 @@
 				748D28791BC1A9A200C39DE6 /* RegisterViewController.h */,
 				748D287A1BC1A9A200C39DE6 /* RegisterViewController.m */,
 				748D287B1BC1A9A200C39DE6 /* RegisterViewController.xib */,
-				748D28841BC27B9500C39DE6 /* UserAccountCell.h */,
-				748D28851BC27B9500C39DE6 /* UserAccountCell.m */,
-				748D28861BC27B9500C39DE6 /* UserAccountCell.xib */,
-				748D28891BC27BB500C39DE6 /* PasswordCell.h */,
-				748D288A1BC27BB500C39DE6 /* PasswordCell.m */,
-				748D288B1BC27BB500C39DE6 /* PasswordCell.xib */,
+				74074AAC1C188DAC00F6023B /* LoginTableViewController.h */,
+				74074AAD1C188DAC00F6023B /* LoginTableViewController.m */,
+				74074AAE1C188DAC00F6023B /* LoginTableViewController.xib */,
+				74074AB11C18975600F6023B /* UserNameTableViewCell.h */,
+				74074AB21C18975600F6023B /* UserNameTableViewCell.m */,
+				74074AB31C18975600F6023B /* UserNameTableViewCell.xib */,
+				74074AB61C18977000F6023B /* PasswordTableViewCell.h */,
+				74074AB71C18977000F6023B /* PasswordTableViewCell.m */,
+				74074AB81C18977000F6023B /* PasswordTableViewCell.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -655,14 +689,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				74448DE51BAC02AD00B95B9F /* icon_undo.png in Resources */,
+				74074A991C181BAF00F6023B /* PlanBoardStoryBoard.storyboard in Resources */,
 				74448DE41BAC02AD00B95B9F /* icon_stopRecord.png in Resources */,
 				74448DE71BAC02AD00B95B9F /* blueShirt.png in Resources */,
 				74448DE21BAC02AD00B95B9F /* icon_record.png in Resources */,
 				74448DDF1BAC02AD00B95B9F /* icon_desc_our.png in Resources */,
 				74448DE81BAC02AD00B95B9F /* redShirt.png in Resources */,
-				748D288D1BC27BB500C39DE6 /* PasswordCell.xib in Resources */,
 				74448D3D1BAAE3A100B95B9F /* LaunchScreen.xib in Resources */,
 				74448D3A1BAAE3A100B95B9F /* Images.xcassets in Resources */,
+				74074AB01C188DAC00F6023B /* LoginTableViewController.xib in Resources */,
 				74448DE61BAC02AD00B95B9F /* img_playGround.jpg in Resources */,
 				748D28971BC2AB7B00C39DE6 /* RegisterInformationViewController.xib in Resources */,
 				748D28781BC16CA500C39DE6 /* lanchvide.mp4 in Resources */,
@@ -672,9 +707,10 @@
 				74448DDE1BAC02AD00B95B9F /* icon_desc_against.png in Resources */,
 				74448DE11BAC02AD00B95B9F /* icon_Pan.png in Resources */,
 				74448DDD1BAC02AD00B95B9F /* icon_addPlayer.png in Resources */,
-				748D28881BC27B9500C39DE6 /* UserAccountCell.xib in Resources */,
+				74074ABA1C18977000F6023B /* PasswordTableViewCell.xib in Resources */,
 				7450576F1BBFD19C0069A2AF /* FirstGuideViewController.xib in Resources */,
 				74448DDC1BAC02AD00B95B9F /* icon_add_our.png in Resources */,
+				74074AB51C18975600F6023B /* UserNameTableViewCell.xib in Resources */,
 				74448DE31BAC02AD00B95B9F /* icon_redo.png in Resources */,
 				74448DA91BAC027400B95B9F /* Default-568h@2x.png in Resources */,
 			);
@@ -744,27 +780,31 @@
 			files = (
 				74448D351BAAE3A100B95B9F /* ViewController.m in Sources */,
 				74448DD91BAC02AD00B95B9F /* RCDraggableButton.m in Sources */,
+				74074AA11C18287400F6023B /* MatchListViewController.m in Sources */,
 				74B9B6201BC673A600599F19 /* XLReachabilityHelper.m in Sources */,
 				74B9B6251BC6DD3500599F19 /* LoginNetDAO.m in Sources */,
 				74448DEA1BAC02AD00B95B9F /* THCapture.m in Sources */,
+				74074AB91C18977000F6023B /* PasswordTableViewCell.m in Sources */,
 				74448DE91BAC02AD00B95B9F /* RecordManager.m in Sources */,
 				74448DEB1BAC02AD00B95B9F /* THCaptureUtilities.m in Sources */,
 				74448D321BAAE3A100B95B9F /* AppDelegate.m in Sources */,
 				74B9B6281BC6F81300599F19 /* registManager.m in Sources */,
 				74B9B6141BC6660600599F19 /* HttpHelper.m in Sources */,
 				74448DD51BAC02AD00B95B9F /* ACEDrawingView.m in Sources */,
-				748D288C1BC27BB500C39DE6 /* PasswordCell.m in Sources */,
 				74448DD41BAC02AD00B95B9F /* ACEDrawingTools.m in Sources */,
 				74448D2F1BAAE3A100B95B9F /* main.m in Sources */,
 				744A37741BC3EB3F0007AB29 /* CALayer+ColorFromUIColor.m in Sources */,
 				745057661BBD69FE0069A2AF /* AppServerConfig.m in Sources */,
 				74448DD71BAC02AD00B95B9F /* HMSideMenu.m in Sources */,
-				748D28871BC27B9500C39DE6 /* UserAccountCell.m in Sources */,
 				74448DD81BAC02AD00B95B9F /* PlayersManager.m in Sources */,
+				74074AAA1C18334400F6023B /* RootTabBarViewController.m in Sources */,
 				748D287C1BC1A9A200C39DE6 /* RegisterViewController.m in Sources */,
 				745057741BC011B30069A2AF /* ModuleRouter.m in Sources */,
+				74074AAF1C188DAC00F6023B /* LoginTableViewController.m in Sources */,
 				74F6E57B1BCD34C500972DB0 /* XLHttpHelper.m in Sources */,
+				74074AB41C18975600F6023B /* UserNameTableViewCell.m in Sources */,
 				74F6E56C1BCA499800972DB0 /* RegistInfoEntity.m in Sources */,
+				74074AA71C18313000F6023B /* PBNavigationViewController.m in Sources */,
 				744A37851BC5178C0007AB29 /* NSString+Extend.m in Sources */,
 				74B9B6151BC6660600599F19 /* HttpHelper+AFNetworking.m in Sources */,
 				74448DD61BAC02AD00B95B9F /* LZXAudioRecordAndTransCoding.m in Sources */,

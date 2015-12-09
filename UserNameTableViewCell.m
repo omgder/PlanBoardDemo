@@ -1,14 +1,14 @@
 //
-//  UserAccountCell.m
+//  UserNameTableViewCell.m
 //  PlanBoardDemo
 //
-//  Created by OMGDER on 15/10/5.
+//  Created by OMGDER on 15/12/10.
 //  Copyright © 2015年 OMGDER. All rights reserved.
 //
 
-#import "UserAccountCell.h"
+#import "UserNameTableViewCell.h"
 
-@implementation UserAccountCell
+@implementation UserNameTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

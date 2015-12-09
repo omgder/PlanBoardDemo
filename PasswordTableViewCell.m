@@ -1,14 +1,14 @@
 //
-//  PasswordCell.m
+//  PasswordTableViewCell.m
 //  PlanBoardDemo
 //
-//  Created by OMGDER on 15/10/5.
+//  Created by OMGDER on 15/12/10.
 //  Copyright © 2015年 OMGDER. All rights reserved.
 //
 
-#import "PasswordCell.h"
+#import "PasswordTableViewCell.h"
 
-@implementation PasswordCell
+@implementation PasswordTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

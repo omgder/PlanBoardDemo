@@ -9,6 +9,7 @@
 #import "LoginNetDAO.h"
 #import "NSString+XY.h"
 #import "RegistInfoEntity.h"
+#import "ModuleRouter.h"
 
 typedef enum kActionButtonIndex
 {
@@ -115,11 +116,18 @@ typedef enum kActionButtonIndex
 
 - (IBAction)confirmRegistInfo:(id)sender
 {
+    
+    [[ModuleRouter sharedInstance] jumpToMatchListViewControllerFromSource:self];
+    
+    
+    
     if ([self checkRegistInfomation])
     {
         [_dao registRequestWithInfo:_registInfoDic completion:^(id dao, NSDictionary *result, NSError *error) {
-            if (result) {
+            if (result)
+            {
                 NSLog(@"%@",result);
+                
             }
         }];
     }
